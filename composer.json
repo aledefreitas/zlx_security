@@ -1,0 +1,20 @@
+{
+    "name": "aledefreitas/zlx_security",
+    "description": "Security class used for encrypting, decrypting, and hashing",
+    "require": {
+        "php": ">=5.6",
+        "ext-openssl": "*",
+        "ext-mbstring": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandre de Freitas Caetano",
+            "email": "alexandrefc2@hotmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+	"autoload": {
+		"psr-4": { "ZLX\\": "src/" }
+	}
+}

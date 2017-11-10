@@ -107,7 +107,7 @@ class Security
      */
     public function encrypt($original_string, $cipher_key)
     {
-        $cipher_key = $this->_genKey($cipher_key, $salt);
+        $cipher_key = $this->_genKey($cipher_key);
 
         $ivSize = openssl_cipher_iv_length('AES-256-CBC');
         $iv = openssl_random_pseudo_bytes($ivSize);
@@ -125,7 +125,7 @@ class Security
      */
     public function decrypt($cipher_string, $cipher_key)
     {
-        $cipher_key = $this->_genKey($cipher_key, $salt);
+        $cipher_key = $this->_genKey($cipher_key);
 
         $hmacSize = 64;
         $hmacString = mb_substr($cipher_string, 0, $hmacSize, "8bit");

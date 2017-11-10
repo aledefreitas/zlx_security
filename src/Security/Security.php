@@ -4,7 +4,7 @@
  *
  * @author		Alexandre de Freitas Caetano <https://github.com/aledefreitas>
  */
-namespace ZLX\Session;
+namespace ZLX\Security;
 
 /**
  * Classe para lidar com criptografia

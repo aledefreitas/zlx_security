@@ -123,7 +123,7 @@ class Security
      *
      * @return string
      */
-    public static function decrypt($cipher_string, $cipher_key)
+    public function decrypt($cipher_string, $cipher_key)
     {
         $cipher_key = $this->_genKey($cipher_key, $salt);
 

@@ -112,7 +112,9 @@ class Security
         $ivSize = openssl_cipher_iv_length('AES-256-CBC');
         $iv = openssl_random_pseudo_bytes($ivSize);
 
-        return $iv . openssl_encrypt($original_string, 'AES-256-CBC', $cipher_key, OPENSSL_RAW_DATA, $iv);
+        $cipher_text = $iv . openssl_encrypt($original_string, 'AES-256-CBC', $cipher_key, OPENSSL_RAW_DATA, $iv);
+
+        return $this->_genHmac($cipher_text, $cipher_key) . $cipher_text;
     }
 
     /**
